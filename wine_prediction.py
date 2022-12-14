@@ -42,7 +42,7 @@ def addWine(wine: Wine):
     wine.wine['Id'] = maxId+1
     new_data = pd.DataFrame.from_dict([wine.wine])
     data = data.append(new_data, ignore_index=True)
-    data.to_csv("Wines.csv")
+    data.to_csv("Wines.csv", index=False)
     return {"message": "Wine added in csv file."}
 
 def description():
@@ -56,4 +56,4 @@ w = Wine(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
 """print(w.wine)
 print(predictWine(w))
 print(retrain())"""
-#addWine(w)
+addWine(w)
