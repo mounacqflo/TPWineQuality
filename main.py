@@ -1,6 +1,10 @@
 from fastapi import FastAPI
+import uvicorn
 from api.model.model import model_router
 from api.predict.predict import predict_router
+
+# configure port
+PORT = 8000
 
 app = FastAPI()
 
@@ -11,9 +15,5 @@ app.include_router(predict_router)
 async def root():
     return {"message": "Wine Quality Prediction"}
 
-"""
-    if item_id not in items:
-        raise HTTPException HTTPException(status_code=404, detail="Item not found")
-"""
-
-# configurer le port
+if __name__ == '__main__':
+    uvicorn.run(app, port=PORT)
