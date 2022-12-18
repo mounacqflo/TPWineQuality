@@ -20,7 +20,7 @@ To visualize all the endpoints and the API routes available, go to the following
 http://localhost:8000/docs (replace 8000 by your port)
 
 ## Test
-To execute the tests, write the following command line
+To execute the tests, write the following command line :
 
 python3 -m pytest --cov
 
