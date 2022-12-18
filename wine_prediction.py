@@ -75,7 +75,7 @@ class WinePrediction:
         Then save it in a joblib file.
         """
 
-        data = pd.read_csv("Wines.csv")
+        data = pd.read_csv("./data/Wines.csv")
         del data['Id']
         X = data.drop('quality', axis=1)
         y = data['quality']
@@ -90,19 +90,19 @@ class WinePrediction:
         """ Add a Wine model instance in the CSV file. """
 
         wine_dict = self.convertWineIntoDict(wine)
-        data = pd.read_csv("Wines.csv")
+        data = pd.read_csv("./data/Wines.csv")
         max_id = data['Id'].max()
         wine_dict['Id'] = max_id+1
         new_data = pd.DataFrame.from_dict([wine_dict])
         data = data.append(new_data, ignore_index=True)
-        data.to_csv("Wines.csv", index = False)
+        data.to_csv("./data/Wines.csv", index = False)
         return {"message": "Wine added in csv file."}
 
 
     def getPerfectWine(self):
         """ Return the best wine by sorting reversly the data and then take the first one. """
 
-        data = pd.read_csv("Wines.csv")
+        data = pd.read_csv("./data/Wines.csv")
         data = data.sort_values(by=['quality'], ascending=False)
         wine_panda_object = data.iloc[0]
         return self.convertPandaObjectIntoWine(wine_panda_object)
@@ -116,7 +116,7 @@ class WinePrediction:
 
         if exists("./rfc.joblib"):
             random_forest = joblib.load("./rfc.joblib")
-            data = pd.read_csv("Wines.csv")
+            data = pd.read_csv("./data/Wines.csv")
             del data['Id']
             X = data.drop('quality', axis=1)
             y = data['quality']
