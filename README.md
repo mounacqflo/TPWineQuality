@@ -13,7 +13,7 @@ pip install -r requirements.txt
 python3 main.py
 
 You have to execute python file.
-To change the port, you change change the number in the file "main.py", at line 7.
+To change the port, you can change the number in the file "main.py", at line 7.
 
 To visualize all the endpoints and the API routes available, go to the following url :
 
