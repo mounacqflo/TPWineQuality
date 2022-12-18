@@ -27,7 +27,7 @@ ICI
 ### Dataset
 
 All data are stocked in the file "Wines.csv"
-They are used to train the model
+They are used to train the model.
 
 ### Model
 
