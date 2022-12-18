@@ -38,9 +38,9 @@ We used the scikit learn module "RandomForestClassifier" for the prediction.
 
 All data are used in this model.
 
-### Best wine
+### Perfect wine
 
-The find the best wine, we search for all wines that have the best quality in the dataset, and return one of them.
+To find the perfect wine, we search for all wines that have the best quality in the dataset, and return one of them.
 
 ## Contributors
 Thomas Bordis, bordisthom@cy-tech.fr
