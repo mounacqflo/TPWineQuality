@@ -28,7 +28,7 @@ python3 -m pytest --cov
 
 ### Dataset
 
-All data are stocked in the file "Wines.csv"
+All data are stored in the file "Wines.csv"
 
 They are used to train the model.
 
